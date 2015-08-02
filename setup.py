@@ -18,9 +18,9 @@ if not os.path.exists(BIN_DIR):
 
 
 def compile(source, target):
-    CC = 'gcc'
-    CFLAGS = ('-lm -pthread -O3 -Wall -march=native -funroll-loops '
-              '-Wno-unused-result')
+    CC = 'clang'
+    CFLAGS = ('-lm -pthread -O2 -Wall -march=native -funroll-loops '
+              '-Wunused-result')
     if sys.platform == 'darwin':
         CFLAGS += ' -I/usr/include/malloc'
 
